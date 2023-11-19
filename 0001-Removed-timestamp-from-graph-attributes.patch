@@ -1,0 +1,25 @@
+From 8ce4ed658ada9e886952047a58125ed5e43d5239 Mon Sep 17 00:00:00 2001
+From: JoelSalas <salas.22@buckeyemail.osu.edu>
+Date: Sun, 19 Nov 2023 20:36:05 +0000
+Subject: [PATCH] Removed 'timestamp' from graph attributes
+
+---
+ src/Graph.tsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Graph.tsx b/src/Graph.tsx
+index 302397e..9db17f1 100644
+--- a/src/Graph.tsx
++++ b/src/Graph.tsx
+@@ -43,7 +43,7 @@ class Graph extends Component<IProps, {}> {
+       elem.setAttribute('column-pivots', '["stock"]');
+       elem.setAttribute('row-pivots', '["timestamp"]');
+       // Added the following attributes to 'columns' ratio, lower_bound, upper_bound, trigger_alert, timestamp
+-      elem.setAttribute('columns', '["ratio", "lower_bound", "upper_bound", "trigger_alert", "timestamp"]');
++      elem.setAttribute('columns', '["ratio", "lower_bound", "upper_bound", "trigger_alert"]');
+       elem.setAttribute('aggregates', JSON.stringify({
+         price_abc:  'avg',
+         price_def: 'avg',
+-- 
+2.42.1
+
