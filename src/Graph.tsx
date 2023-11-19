@@ -21,12 +21,16 @@ class Graph extends Component<IProps, {}> {
   componentDidMount() {
     // Get element from the DOM.
     const elem = document.getElementsByTagName('perspective-viewer')[0] as unknown as PerspectiveViewerElement;
-
+    // implemented one main line tracking the
+    // ratio of two stocks, as well as upper and lower bounds
     const schema = {
       stock: 'string',
       top_ask_price: 'float',
       top_bid_price: 'float',
       timestamp: 'date',
+      upper_bound: 'float',
+      lower_bound: 'float',
+      trigger_alert: 'float',
     };
 
     if (window.perspective && window.perspective.worker()) {
