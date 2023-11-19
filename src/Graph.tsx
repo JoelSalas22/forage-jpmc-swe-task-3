@@ -43,7 +43,7 @@ class Graph extends Component<IProps, {}> {
       elem.setAttribute('column-pivots', '["stock"]');
       elem.setAttribute('row-pivots', '["timestamp"]');
       // Added the following attributes to 'columns' ratio, lower_bound, upper_bound, trigger_alert, timestamp
-      elem.setAttribute('columns', '["ratio", "lower_bound", "upper_bound", "trigger_alert", "timestamp"]');
+      elem.setAttribute('columns', '["ratio", "lower_bound", "upper_bound", "trigger_alert"]');
       elem.setAttribute('aggregates', JSON.stringify({
         price_abc:  'avg',
         price_def: 'avg',
